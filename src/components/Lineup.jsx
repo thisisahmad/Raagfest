@@ -26,7 +26,7 @@ const Lineup = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     className="text-5xl md:text-7xl font-bold mb-16 text-center text-white"
                 >
-                    THE <span className="text-brand-green">LINEUP</span>
+                    THE <span className="text-brand-yellow">LINEUP</span>
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -37,7 +37,7 @@ const Lineup = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative overflow-hidden rounded-xl h-96 cursor-pointer border border-white/10 hover:border-brand-green transition-colors"
+                            className="group relative overflow-hidden rounded-xl h-96 cursor-pointer border border-white/10 hover:border-brand-pink transition-colors"
                         >
                             <img
                                 src={artist.img}
@@ -47,10 +47,10 @@ const Lineup = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-90 group-hover:opacity-70 transition-opacity" />
 
                             <div className="absolute bottom-0 left-0 p-6 w-full">
-                                <h3 className="text-3xl font-bold text-white group-hover:text-brand-green transition-colors text-shadow">
+                                <h3 className="text-3xl font-bold text-white group-hover:text-brand-yellow transition-colors text-shadow">
                                     {artist.name}
                                 </h3>
-                                <p className="text-brand-blue uppercase tracking-wider text-sm mt-1 font-bold">
+                                <p className="text-brand-pink uppercase tracking-wider text-sm mt-1 font-bold">
                                     {artist.role}
                                 </p>
                             </div>

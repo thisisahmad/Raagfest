@@ -27,17 +27,17 @@ h6 {
 }
 
 .text-glow {
-    text-shadow: 0 0 10px rgba(5, 35, 253, 0.7), 0 0 20px rgba(1, 250, 134, 0.5);
+    text-shadow: 0 0 10px rgba(254, 5, 121, 0.7), 0 0 20px rgba(250, 220, 2, 0.5);
 }
 
 .brand-gradient {
-    background: linear-gradient(to right, #0523fd, #01fa86);
+    background: linear-gradient(to right, #fe0579, #fadc02);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .border-glow {
-    box-shadow: 0 0 10px #01fa86;
+    box-shadow: 0 0 10px #fe0579;
 }
 
 /* Custom Scrollbar */
@@ -55,5 +55,5 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #01fa86;
+    background: #fe0579;
 }

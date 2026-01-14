@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 const Tickets = () => {
     const tickets = [
         { type: "General Admission", price: "₨ 3,000", benefits: ["Access to Main Arena", "Food Court Access", "Standard Entry"], color: "border-white" },
-        { type: "VIP Pass", price: "₨ 8,000", benefits: ["Front Stage Access", "VIP Lounge", "Fast Track Entry", "Premium Refreshments"], color: "border-brand-blue" },
-        { type: "Backstage", price: "₨ 20,000", benefits: ["All VIP Perks", "Meet & Greet", "Backstage Tour", "Signed Merchandise"], color: "border-brand-green" },
+        { type: "VIP Pass", price: "₨ 8,000", benefits: ["Front Stage Access", "VIP Lounge", "Fast Track Entry", "Premium Refreshments"], color: "border-brand-pink" },
+        { type: "Backstage", price: "₨ 20,000", benefits: ["All VIP Perks", "Meet & Greet", "Backstage Tour", "Signed Merchandise"], color: "border-brand-yellow" },
     ];
 
     return (
         <section className="py-20 bg-brand-dark relative">
             <div className="container mx-auto px-4">
-                <h2 className="text-5xl font-bold text-center mb-16 uppercase">Get <span className="text-brand-blue">Tickets</span></h2>
+                <h2 className="text-5xl font-bold text-center mb-16 uppercase">Get <span className="text-brand-pink">Tickets</span></h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {tickets.map((ticket, idx) => (
@@ -27,12 +27,12 @@ const Tickets = () => {
                             <ul className="mb-8 space-y-4 text-gray-400">
                                 {ticket.benefits.map((benefit, i) => (
                                     <li key={i} className="flex items-center justify-center gap-2">
-                                        <span className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-brand-green' : 'bg-gray-500'}`} /> {benefit}
+                                        <span className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-brand-yellow' : 'bg-gray-500'}`} /> {benefit}
                                     </li>
                                 ))}
                             </ul>
 
-                            <button className="mt-auto w-full py-4 bg-white text-black font-bold uppercase hover:bg-brand-green hover:text-black transition-all duration-300">
+                            <button className="mt-auto w-full py-4 bg-white text-black font-bold uppercase hover:bg-brand-yellow hover:text-black transition-all duration-300">
                                 Purchase
                             </button>
                         </motion.div>

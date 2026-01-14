@@ -26,8 +26,8 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
 
                 {/* Logo */}
-                <div className="text-2xl font-display font-bold tracking-tighter text-white">
-                    RAAG<span className="text-brand-green">FEST</span>
+                <div className="text-2xl font-display font-bold tracking-tighter text-brand-yellow">
+                    RAAG<span className="text-brand-pink">FEST</span>
                 </div>
 
                 {/* Desktop Nav */}
@@ -36,7 +36,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-green transition-all"
+                            className="text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-yellow transition-all"
                         >
                             {link.name}
                         </a>
@@ -48,7 +48,7 @@ const Navbar = () => {
                         onMouseEnter={() => setIsPartnerOpen(true)}
                         onMouseLeave={() => setIsPartnerOpen(false)}
                     >
-                        <button className="flex items-center gap-1 text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-blue transition-all py-2">
+                        <button className="flex items-center gap-1 text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-pink transition-all py-2">
                             Partners <ChevronDown size={14} className={`transition-transform duration-300 ${isPartnerOpen ? 'rotate-180' : ''}`} />
                         </button>
 
@@ -59,16 +59,16 @@ const Navbar = () => {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                     transition={{ duration: 0.2 }}
-                                    className="absolute top-full right-0 mt-2 w-56 bg-brand-dark/90 backdrop-blur-xl border border-brand-blue/30 rounded-xl overflow-hidden shadow-2xl"
+                                    className="absolute top-full right-0 mt-2 w-56 bg-brand-dark/90 backdrop-blur-xl border border-brand-pink/30 rounded-xl overflow-hidden shadow-2xl"
                                 >
                                     <div className="p-2 flex flex-col gap-1">
                                         {partnerLinks.map((item) => (
                                             <a
                                                 key={item.name}
                                                 href={item.href}
-                                                className="flex items-center gap-3 px-4 py-3 text-sm text-gray-200 hover:bg-white/5 hover:text-brand-green rounded-lg transition-colors group"
+                                                className="flex items-center gap-3 px-4 py-3 text-sm text-gray-200 hover:bg-white/5 hover:text-brand-yellow rounded-lg transition-colors group"
                                             >
-                                                <item.icon size={16} className="text-gray-400 group-hover:text-brand-green" />
+                                                <item.icon size={16} className="text-gray-400 group-hover:text-brand-yellow" />
                                                 {item.name}
                                             </a>
                                         ))}
@@ -78,14 +78,14 @@ const Navbar = () => {
                         </AnimatePresence>
                     </div>
 
-                    <a href="#contact" className="text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-green transition-all">
+                    <a href="#contact" className="text-sm font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-yellow transition-all">
                         Contact
                     </a>
                 </div>
 
                 {/* CTA Button */}
                 <div className="hidden md:block">
-                    <button className="px-6 py-2 bg-gradient-to-r from-brand-blue to-brand-green text-black font-bold uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(1,250,134,0.4)] hover:scale-105 transition-all duration-300">
+                    <button className="px-6 py-2 bg-gradient-to-r from-brand-pink to-brand-yellow text-black font-bold uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(250,220,2,0.4)] hover:scale-105 transition-all duration-300">
                         Buy Tickets
                     </button>
                 </div>
