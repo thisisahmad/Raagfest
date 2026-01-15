@@ -2,19 +2,14 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Instagram } from 'lucide-react';
 
-// Using artist images as placeholders for social posts
-import img1 from '../assets/artists/hasan_final.png';
-import img2 from '../assets/artists/faris_final.png';
-import img3 from '../assets/artists/havi_new.jpg';
-import img4 from '../assets/artists/mustafa_real.png';
-import img5 from '../assets/artists/nehaal_final.png';
+import img1 from '../assets/social/post_1.png';
+import img2 from '../assets/social/post_2.png';
+import img3 from '../assets/social/post_3.png';
 
 const socialPosts = [
-    { id: 1, img: img1, link: "https://www.instagram.com/raagfest.pk" },
-    { id: 2, img: img2, link: "https://www.instagram.com/raagfest.pk" },
-    { id: 3, img: img3, link: "https://www.instagram.com/raagfest.pk" },
-    { id: 4, img: img4, link: "https://www.instagram.com/raagfest.pk" },
-    { id: 5, img: img5, link: "https://www.instagram.com/raagfest.pk" },
+    { id: 1, img: img1, link: "https://www.instagram.com/raagfest.pk/reel/DTTCgIOiFKq/" },
+    { id: 2, img: img2, link: "https://www.instagram.com/raagfest.pk/p/DTdIIDPiA7_/" },
+    { id: 3, img: img3, link: "https://www.instagram.com/raagfest.pk/p/DTU_SuniOhf/" },
 ];
 
 const SocialFeed = () => {
@@ -94,7 +89,7 @@ const SocialFeed = () => {
                         </motion.div>
 
                         {/* Re-doing the layout for smoother custom carousel logic without installing swiper */}
-                        <div className="flex gap-6 overflow-x-auto md:overflow-hidden pb-8 md:pb-0 scrollbar-hide snap-x snap-mandatory">
+                        <div className="flex gap-6 overflow-x-auto md:overflow-hidden pb-8 md:pb-0 scrollbar-hide snap-x snap-mandatory justify-center">
                             {socialPosts.map((post, index) => (
                                 <motion.a
                                     href={post.link}

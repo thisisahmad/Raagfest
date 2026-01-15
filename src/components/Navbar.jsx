@@ -22,9 +22,9 @@ const Navbar = () => {
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+            className="fixed top-0 left-0 right-0 z-50 px-4 py-3"
         >
-            <div className="max-w-7xl mx-auto backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+            <div className="max-w-7xl mx-auto backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl px-6 py-2 flex items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
 
                 {/* Logo */}
                 <a href="#" className="block w-32 md:w-40">
