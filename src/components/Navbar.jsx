@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Store, Handshake, Mail, Ticket } from 'lucide-react';
+import { ChevronDown, Store, Handshake, X } from 'lucide-react';
+import logoTransparent from '../assets/logo_transparent.png';
 
 const Navbar = () => {
     const [isPartnerOpen, setIsPartnerOpen] = useState(false);
@@ -26,9 +27,9 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto backdrop-blur-xl bg-black/60 border border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
 
                 {/* Logo */}
-                <div className="text-2xl font-display font-bold tracking-tighter text-brand-yellow">
-                    RAAG<span className="text-brand-pink">FEST</span>
-                </div>
+                <a href="#" className="block w-32 md:w-40">
+                    <img src={logoTransparent} alt="Raag Fest" className="w-full h-auto object-contain drop-shadow-[0_0_10px_rgba(254,5,121,0.5)]" />
+                </a>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
@@ -92,15 +93,63 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button (Hamburger) */}
                 <div className="md:hidden">
-                    <button onClick={() => setIsMobileOpen(!isMobileOpen)} className="text-white">
-                        <div className="space-y-1.5 cursor-pointer">
-                            <div className="w-6 h-0.5 bg-white"></div>
-                            <div className="w-6 h-0.5 bg-white"></div>
-                            <div className="w-6 h-0.5 bg-white"></div>
-                        </div>
+                    <button onClick={() => setIsMobileOpen(!isMobileOpen)} className="text-white p-2">
+                        {isMobileOpen ? <X /> : (
+                            <div className="space-y-1.5 cursor-pointer">
+                                <div className="w-6 h-0.5 bg-white"></div>
+                                <div className="w-6 h-0.5 bg-white"></div>
+                                <div className="w-6 h-0.5 bg-white"></div>
+                            </div>
+                        )}
                     </button>
                 </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMobileOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="absolute top-full left-0 right-0 mt-2 px-6 pb-6 md:hidden"
+                    >
+                        <div className="bg-brand-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl">
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMobileOpen(false)}
+                                    className="text-lg font-bold uppercase tracking-widest text-white hover:text-brand-yellow transition-colors"
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                            <div className="h-[1px] bg-white/10 my-2" />
+                            {partnerLinks.map((link) => (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMobileOpen(false)}
+                                    className="text-base font-semibold uppercase tracking-widest text-gray-300 hover:text-brand-pink transition-colors flex items-center gap-2"
+                                >
+                                    <link.icon size={18} /> {link.name}
+                                </a>
+                            ))}
+                            <a
+                                href="#contact"
+                                onClick={() => setIsMobileOpen(false)}
+                                className="text-lg font-bold uppercase tracking-widest text-white hover:text-brand-yellow transition-colors mt-2"
+                            >
+                                Contact
+                            </a>
+                            <button className="w-full mt-4 py-3 bg-gradient-to-r from-brand-pink to-brand-yellow text-black font-bold uppercase rounded-lg">
+                                Buy Tickets
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.nav>
     );
 };
