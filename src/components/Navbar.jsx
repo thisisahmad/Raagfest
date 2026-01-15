@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Store, Handshake, X } from 'lucide-react';
-import logoTransparent from '../assets/logo_transparent.png';
+import logoHeader from '../assets/logo_header.png';
 
 const Navbar = () => {
     const [isPartnerOpen, setIsPartnerOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <a href="#" className="block w-32 md:w-40">
-                    <img src={logoTransparent} alt="Raag Fest" className="w-full h-auto object-contain drop-shadow-[0_0_10px_rgba(254,5,121,0.5)]" />
+                    <img src={logoHeader} alt="Raag Fest" className="w-full h-auto object-contain drop-shadow-[0_0_10px_rgba(254,5,121,0.5)]" />
                 </a>
 
                 {/* Desktop Nav */}

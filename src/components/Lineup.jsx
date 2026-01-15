@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion';
 
 // Import images
-import hasanImg from '../assets/artists/hasan_real.png';
-import haviImg from '../assets/artists/havi_real.png';
-import nehaalImg from '../assets/artists/nehaal_real.png';
-import farisImg from '../assets/artists/faris_real.png';
-import djAhsanImg from '../assets/artists/dj_ahsan_real.png';
-import hassaanImg from '../assets/artists/hassaan_shaheer_real.png';
+import hasanImg from '../assets/artists/hasan_final.png';
+import haviImg from '../assets/artists/havi_final.png';
+import nehaalImg from '../assets/artists/nehaal_final.png';
+import farisImg from '../assets/artists/faris_final.png';
+import afusicImg from '../assets/artists/afusic_real.png';
+import mustafaImg from '../assets/artists/mustafa_real.png';
 
 const artists = [
     { name: "Hasan Raheem", img: hasanImg, role: "Headliner" },
     { name: "Faris Shafi", img: farisImg, role: "Rap Icon" },
-    { name: "Nehaal Naseem", img: nehaalImg, role: "Vocalist" },
     { name: "Havi", img: haviImg, role: "Soul" },
-    { name: "Hassaan Shaheer", img: hassaanImg, role: "Indie" },
-    { name: "DJ Ahsan", img: djAhsanImg, role: "EDM" },
+    { name: "Mustafa Zahid", img: mustafaImg, role: "Rock" },
+    { name: "Nehaal Naseem", img: nehaalImg, role: "Vocalist" },
+    { name: "Afusic", img: afusicImg, role: "EDM" },
 ];
 
 const Lineup = () => {
