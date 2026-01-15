@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 
 // Import images
 import hasanImg from '../assets/artists/hasan_final.png';
-import haviImg from '../assets/artists/havi_final.png';
+import haviImg from '../assets/artists/havi_new.jpg';
 import nehaalImg from '../assets/artists/nehaal_final.png';
 import farisImg from '../assets/artists/faris_final.png';
-import afusicImg from '../assets/artists/afusic_real.png';
+import afusicImg from '../assets/artists/afusic_new.jpg';
 import mustafaImg from '../assets/artists/mustafa_real.png';
 
 const artists = [
-    { name: "Hasan Raheem", img: hasanImg, role: "Headliner" },
-    { name: "Faris Shafi", img: farisImg, role: "Rap Icon" },
-    { name: "Havi", img: haviImg, role: "Soul" },
-    { name: "Mustafa Zahid", img: mustafaImg, role: "Rock" },
-    { name: "Nehaal Naseem", img: nehaalImg, role: "Vocalist" },
-    { name: "Afusic", img: afusicImg, role: "EDM" },
+    { name: "Hasan Raheem", img: hasanImg, role: "The Velvet Voice" },
+    { name: "Faris Shafi", img: farisImg, role: "The Unpredictable Maverick" },
+    { name: "Havi", img: haviImg, role: "The Soulful One" },
+    { name: "Mustafa Zahid", img: mustafaImg, role: "Soul Rock Legend" },
+    { name: "Nehaal Naseem", img: nehaalImg, role: "The Young Star" },
+    { name: "Afusic", img: afusicImg, role: "Indie Sound" },
 ];
 
 const Lineup = () => {
