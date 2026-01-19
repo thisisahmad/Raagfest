@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Store, Handshake, X } from 'lucide-react';
-import logoHeader from '../assets/logo_header.png';
+import logoHeader from '../assets/logo_header_raas.png';
 
 const Navbar = () => {
     const [isPartnerOpen, setIsPartnerOpen] = useState(false);
