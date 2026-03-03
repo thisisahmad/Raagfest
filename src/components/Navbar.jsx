@@ -20,17 +20,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/10 shadow-card-glow">
-      <div className="container mx-auto px-4 flex items-center justify-between h-14 md:h-20">
-        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }} className="flex items-center gap-2 flex-shrink-0">
-          <LogoImg src="logos/raag.png" alt="Raag Fest" className="h-10 md:h-14 w-auto max-h-[3.5rem] md:max-h-[4rem] object-contain" />
+    <nav className="nav-bar fixed top-0 left-0 right-0 z-50 nav-seamless">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20 overflow-visible">
+        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero'); }} className="flex items-center flex-shrink-0 transition-opacity hover:opacity-90">
+          <LogoImg src="logos/raag.png" alt="Raag Fest" className="nav-logo h-12 w-auto md:h-[4.5rem] object-contain object-center" />
         </a>
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
                 onClick={() => scrollTo(link.id)}
-                className="nav-link text-white/90 hover:text-brand-orange font-medium transition-colors uppercase tracking-wider text-sm"
+                className="nav-link px-4 py-2.5 rounded-full text-white/85 hover:text-white font-medium text-[0.8125rem] tracking-widest uppercase transition-all duration-300"
               >
                 {link.label}
               </button>
@@ -39,8 +39,8 @@ export default function Navbar() {
         </ul>
         <button
           type="button"
-          aria-label="Menu"
-          className="md:hidden p-2 text-white"
+          aria-label="Open menu"
+          className="md:hidden p-3 -m-1 rounded-full text-white/90 hover:text-white active:bg-white/10 transition-colors duration-200 touch-manipulation"
           onClick={() => setOpen(!open)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,11 +49,11 @@ export default function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="md:hidden glass border-t border-white/5 py-4 px-4">
-          <ul className="flex flex-col gap-3">
+        <div className="nav-dropdown md:hidden">
+          <ul className="flex flex-col gap-0.5 py-3 px-4">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <button onClick={() => scrollTo(link.id)} className="nav-link block w-full text-left py-2 text-white/90 hover:text-brand-orange uppercase tracking-wider">
+                <button onClick={() => scrollTo(link.id)} className="nav-link-mobile w-full text-left min-h-[48px] py-3.5 px-4 rounded-xl text-white/85 hover:text-white active:bg-white/10 font-medium text-sm tracking-wider uppercase transition-colors duration-200 touch-manipulation">
                   {link.label}
                 </button>
               </li>

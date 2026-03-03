@@ -7,24 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-purple': '#57318C',
-        'brand-purple-light': '#7B4BB5',
-        'brand-purple-dark': '#3d2263',
-        'brand-orange': '#FF6D44',
-        'brand-orange-soft': '#FF8A6B',
-        'brand-accent': '#4E4C7F',
-        'brand-black': '#030305',
-        'brand-dark': '#080612',
+        'brand-purple': '#5B3B9D',
+        'brand-purple-light': '#7B5BB5',
+        'brand-purple-dark': '#3d2870',
+        'brand-muted': '#514285',
+        'brand-orange': '#EF6E3A',
+        'brand-orange-soft': '#F58A5C',
+        'brand-black': '#0d0a18',
+        'brand-dark': '#1a0f2e',
       },
       boxShadow: {
-        'premium': '0 0 48px rgba(87, 49, 140, 0.08), 0 0 96px rgba(255, 109, 68, 0.04)',
-        'premium-lg': '0 0 56px rgba(87, 49, 140, 0.12), 0 0 100px rgba(255, 109, 68, 0.06)',
+        'premium': '0 0 48px rgba(91, 59, 157, 0.1), 0 0 96px rgba(239, 110, 58, 0.05)',
+        'premium-lg': '0 0 56px rgba(91, 59, 157, 0.15), 0 0 100px rgba(239, 110, 58, 0.08)',
         'card-glow': '0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Oswald', 'sans-serif'],
-        festival: ['Bebas Neue', 'Oswald', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['Syne', 'sans-serif'],
+        festival: ['Syne', 'sans-serif'],
       },
       animation: {
         'pulse-fast': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -35,8 +35,8 @@ export default {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 15px rgba(255, 109, 68, 0.5), 0 0 30px rgba(87, 49, 140, 0.4)' },
-          '100%': { boxShadow: '0 0 25px rgba(255, 109, 68, 0.7), 0 0 50px rgba(87, 49, 140, 0.5)' },
+          '0%': { boxShadow: '0 0 15px rgba(239, 110, 58, 0.4), 0 0 30px rgba(91, 59, 157, 0.35)' },
+          '100%': { boxShadow: '0 0 25px rgba(239, 110, 58, 0.55), 0 0 50px rgba(91, 59, 157, 0.45)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
